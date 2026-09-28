@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>GLOW BEAUTY SALON</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f8;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        header {
+            background-color: #d96b8a;
+            color: white;
+            text-align: center;
+            padding: 35px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        nav {
+            background-color: white;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 2px 8px #ddd;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: 0.3s;
+        }
+
+        nav a {
+            margin: 0 20px;
+            text-decoration: none;
+            color: #d96b88;
+            font-weight: bold;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav a:hover {
+            color: #b84f70;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: #d96b8a;
+            left: 50%;
+            bottom: -6px;
+            transition: 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+            left: 0;
+        }
+
+        section {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .hero {
+            min-height: 500px;
+            border-radius: 0 0 20px 20px;
+
+            background:
+                linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+                url("images/pexels-clickerhappy-1571585.jpg") center/cover no-repeat;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-small {
+            font-size: 14px;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 600;
+            margin: 10px 0;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #d96b8a;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            margin-top: 15px;
+            box-shadow: 0 4px 12px #e5b8c5;
+            transition: 0.3s;
+            font-family: Arial, sans-serif;
+            font-weight: 600;
+        }
+
+        .button:hover {
+            background-color: #b84f70;
+            transform: scale(1.05);
+        }
+
+        #services h2,
+        #price-list h2,
+        #why-us h2,
+        #testimonials h2,
+        #hours h2,
+        #location h2,
+        #promise h2,
+        #care h2,
+        #Contact h2,
+        .offer-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            animation: headingFade 0.9s ease-out;
+        }
+
+        @keyframes headingFade {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-subtitle {
+            color: #b84f70;
+            font-size: 13px;
+            letter-spacing: 3px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            animation: subtitleFade 0.8s ease-out;
+        }
+
+        @keyframes subtitleFade {
+            from {
+                opacity: 0;
+                letter-spacing: 1px;
+            }
+
+            to {
+                opacity: 1;
+                letter-spacing: 3px;
+            }
+        }
+
+        #services {
+            background-color: #fff5f8;
+        }
+
+        #services h2,
+        #price-list h2,
+        #why-us h2,
+        #testimonials h2,
+        #hours h2,
+        #location h2 {
+            color: #d96b8a;
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        .services {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .service {
+            background-color: white;
+            padding: 25px;
+            width: 210px;
+            border-radius: 18px;
+            box-shadow: 0 3px 10px #ddd;
+            border: 1px solid #f5dce4;
+            transition: 0.3s;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 20px #ccc;
+        }
+
+        .service a:first-child {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .service img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            color: #d96b8a;
+            font-family: 'Playfair Display', serif;
+            font-size: 21px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .service-price {
+            font-size: 16px;
+            font-weight: bold;
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .service-note {
+            font-size: 13px;
+            color: #999;
+            margin-top: 5px;
+            line-height: 1.4;
+        }
+
+        .service-button {
+            display: inline-block;
+            background-color: #d96b8a;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 18px;
+            box-shadow: 0 3px 8px #e5b8c5;
+            transition: 0.3s;
+        }
+
+        .service-button:hover {
+            background-color: #b84f70;
+            transform: scale(1.05);
+        }
+        #offers {
+            background-color: #d96b8a;
+            color: white;
+            padding: 45px 20px;
+        }
+
+        .offer-box {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            color: #555;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px #c45d79;
+        }
+
+        .offer-box h2 {
+            color: #d96b8a;
+            font-size: 30px;
+            margin: 0 0 10px;
+        }
+
+        .offer-box p {
+            font-size: 16px;
+            margin: 8px 0;
+        }
+
+        .offer-price {
+            color: #d96b8a;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .offer-box .button {
+            margin-top: 15px;
+        }
+
+        #price-list {
+            background-color: white;
+        }
+
+        .price-list-box {
+            max-width: 550px;
+            margin: auto;
+            background-color: #fff5f8;
+            padding: 10px 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 5px;
+            border-bottom: 1px solid #efd9e1;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .price-row:last-child {
+            border-bottom: none;
+        }
+
+        .price-row strong {
+            color: #d96b8a;
+            font-size: 17px;
+        }
+
+        .price-note {
+            color: #999;
+            font-size: 13px;
+            margin-top: 15px;
+        }
+        #why-us {
+            background-color: white;
+        }
+
+        .why-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .why-box {
+            background-color: #fff5f8;
+            width: 220px;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 3px 10px #ddd;
+            transition: 0.3s;
+        }
+
+        .why-box:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px #ccc;
+        }
+
+        .why-box h3 {
+            color: #d96b8a;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .why-box p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        #testimonials {
+            background-color: #fff5f8;
+        }
+
+        .testimonial-container {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .testimonial {
+            background-color: white;
+            width: 250px;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 3px 12px #ddd;
+            transition: 0.3s;
+        }
+
+        .testimonial:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 18px #ccc;
+        }
+
+        .stars {
+            color: #d96b8a;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .testimonial h3 {
+            color: #d96b8a;
+            font-family: 'Playfair Display', serif;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        #hours {
+            background-color: white;
+        }
+
+        .hours-box {
+            max-width: 450px;
+            margin: auto;
+            background-color: #fff5f8;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 4px 15px #ddd;
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 5px;
+            border-bottom: 1px solid #efd9e1;
+            color: #666;
+        }
+
+        .hours-row:last-child {
+            border-bottom: none;
+        }
+
+        .hours-row strong {
+            color: #d96b8a;
+        }
+
+        #location {
+            background-color: #fff5f8;
+        }
+
+        .location-text {
+            color: #777;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .map-box {
+            max-width: 900px;
+            margin: auto;
+            background-color: white;
+            padding: 10px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px #ddd;
+        }
+
+        .map-box iframe {
+            width: 100%;
+            height: 350px;
+            border: 0;
+            border-radius: 12px;
+        }
+
+        #promise {
+            background-color: white;
+        }
+
+        #promise h2 {
+            color: #d96b8a;
+            font-size: 32px;
+        }
+
+        #promise p {
+            max-width: 700px;
+            margin: auto;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        #care {
+            background-color: #d96b8a;
+            color: white;
+        }
+
+        #care h2 {
+            font-size: 32px;
+        }
+
+        #care p {
+            font-size: 17px;
+        }
+
+        #Contact {
+            background-color: #fff5f8;
+        }
+
+        #Contact h2 {
+            color: #d96b8a;
+            font-size: 32px;
+        }
+
+        .contact-box {
+            max-width: 500px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: 0 5px 18px #ddd;
+        }
+
+        .contact-title {
+            color: #d96b8a;
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: 600;
+        }
+
+        .top-button {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            background-color: #d96b8a;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 22px;
+            box-shadow: 0 3px 10px #bbb;
+            z-index: 200;
+        }
+
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 24px;
+            z-index: 200;
+        }
+
+        footer {
+            background-color: #d96b8a;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            transition: 0.3s;
+        }
+
+        .footer-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .footer-small {
+            font-size: 13px;
+        }
+
+        .theme-toggle {
+            position: fixed;
+            top: 105px;
+            right: 20px;
+            z-index: 300;
+            border: none;
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 22px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 3px 10px #bbb;
+            transition: 0.3s;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+
+        body.dark-mode {
+            background-color: #1f1f1f;
+            color: #eeeeee;
+        }
+
+        body.dark-mode nav {
+            background-color: #292929;
+            box-shadow: 0 2px 8px #111;
+        }
+
+        body.dark-mode nav a {
+            color: #f39ab2;
+        }
+
+        body.dark-mode nav a:hover {
+            color: #ffb6c8;
+        }
+
+        body.dark-mode #services,
+        body.dark-mode #price-list,
+        body.dark-mode #why-us,
+        body.dark-mode #testimonials,
+        body.dark-mode #hours,
+        body.dark-mode #location,
+        body.dark-mode #promise,
+        body.dark-mode #Contact {
+            background-color: #1f1f1f;
+            color: #eeeeee;
+        }
+
+        body.dark-mode .service,
+        body.dark-mode .price-list-box,
+        body.dark-mode .why-box,
+        body.dark-mode .testimonial,
+        body.dark-mode .hours-box,
+        body.dark-mode .contact-box,
+        body.dark-mode .map-box {
+            background-color: #2b2b2b;
+            color: #eeeeee;
+            box-shadow: 0 5px 15px #111;
+        }
+
+        body.dark-mode .service h3,
+        body.dark-mode .testimonial h3,
+        body.dark-mode .contact-title,
+        body.dark-mode #services h2,
+        body.dark-mode #price-list h2,
+        body.dark-mode #why-us h2,
+        body.dark-mode #testimonials h2,
+        body.dark-mode #hours h2,
+        body.dark-mode #location h2,
+        body.dark-mode #promise h2,
+        body.dark-mode #Contact h2 {
+            color: #f39ab2;
+        }
+
+        body.dark-mode .service-price,
+        body.dark-mode .price-row,
+        body.dark-mode .hours-row {
+            color: #dddddd;
+        }
+
+        body.dark-mode .service-note,
+        body.dark-mode .price-note,
+        body.dark-mode .location-text,
+        body.dark-mode .why-box p,
+        body.dark-mode .testimonial p,
+        body.dark-mode #promise p,
+        body.dark-mode #Contact p {
+            color: #dddddd;
+        }
+
+        body.dark-mode .price-row {
+            border-bottom-color: #555;
+        }
+
+        body.dark-mode .hours-row {
+            border-bottom-color: #555;
+        }
+
+        body.dark-mode #care {
+            background-color: #8f405b;
+        }
+
+        body.dark-mode .offer-box {
+            background-color: #2b2b2b;
+            color: #eeeeee;
+        }
+
+        body.dark-mode .offer-box h2,
+        body.dark-mode .offer-price {
+            color: #f39ab2;
+        }
+
+        body.dark-mode footer {
+            background-color: #151515;
+        }
+
+        body.dark-mode .theme-toggle {
+            background-color: #f3a0b8;
+            color: #222;
+        }
+        @media (max-width: 600px) {
+
+            header {
+                padding: 25px 15px;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            nav {
+                padding: 15px 5px;
+            }
+
+            nav a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            .hero {
+                min-height: 450px;
+                padding: 20px;
+            }
+
+            .hero h2 {
+                font-size: 36px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            .service {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .testimonial {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .why-box {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .price-list-box,
+            .hours-box,
+            .contact-box {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .offer-box {
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .theme-toggle {
+                top: 90px;
+                right: 10px;
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .map-box iframe {
+                height: 280px;
+            }
+
+        }
+        #rating {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff5f8;
+}
+
+#rating h2 {
+    font-family: 'Playfair Display', serif;
+    color: #d96b8a;
+}
+
+.rating-stars button {
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #ccc;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.rating-stars button:hover,
+.rating-stars button.selected {
+    color: #d96b8a;
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <header id="About">
+
+        <h1>GLOW BEAUTY SALON</h1>
+
+        <p>
+            Beauty • Care • Confidence
+        </p>
+
+    </header>
+
+    <nav>
+
+        <a href="#About">About</a>
+
+        <a href="#services">Services</a>
+
+        <a href="#Contact">Contact</a>
+
+    </nav>
+
+    <button
+        class="theme-toggle"
+        id="themeToggle"
+        type="button">
+
+        🌙 Dark Mode
+
+    </button>
+
+    <section class="hero">
+
+        <p class="hero-small">
+            WELCOME TO
+        </p>
+
+        <h2>
+            GLOW BEAUTY SALON
+        </h2>
+
+        <p class="hero-text">
+            Look Beautiful. Feel Confident.
+            <br>
+            Professional beauty care with
+            personalized attention.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                class="button"
+                href="appointment.html">
+
+                Book Appointment
+
+            </a>
+
+            <a
+                class="button"
+                href="#services">
+
+                Explore Services
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="services">
+
+        <p class="section-subtitle">
+            WHAT WE OFFER
+        </p>
+
+        <h2>
+            Our Beauty Services
+        </h2>
+
+        <div class="services">
+
+            <div class="service">
+
+                <a href="appointment.html?service=Haircut">
+
+                    <img
+                        src="images/pexels-cottonbro-3993323 (1).jpg"
+                        alt="Haircut">
+
+                    <h3>
+                        Haircut
+                    </h3>
+
+                    <p class="service-price">
+                        Starting from ₹300
+                    </p>
+
+                    <p class="service-note">
+                        Professional haircut and styling
+                    </p>
+
+                </a>
+
+                <a
+                    class="service-button"
+                    href="appointment.html?service=Haircut">
+
+                    Book Now
+
+                </a>
+
+            </div>
+
+            <div class="service">
+
+                <a href="appointment.html?service=Hair%20Spa">
+
+                    <img
+                        src="images/pexels-thisisjooh-39070334.jpg"
+                        alt="Hair Spa">
+
+                    <h3>
+                        Hair Spa
+                    </h3>
+
+                    <p class="service-price">
+                        Starting from ₹800
+                    </p>
+
+                    <p class="service-note">
+                        Relaxing care for healthy-looking hair
+                    </p>
+
+                </a>
+
+                <a
+                    class="service-button"
+                    href="appointment.html?service=Hair%20Spa">
+
+                    Book Now
+
+                </a>
+
+            </div>
+            <div class="service">
+
+                <a href="appointment.html?service=Facial">
+
+                    <img
+                        src="images/pexels-anete-lusina-5240820.jpg"
+                        alt="Facial">
+
+                    <h3>
+                        Facial
+                    </h3>
+
+                    <p class="service-price">
+                        Starting from ₹1500
+                    </p>
+
+                    <p class="service-note">
+                        Refreshing facial care for glowing skin
+                    </p>
+
+                </a>
+
+                <a
+                    class="service-button"
+                    href="appointment.html?service=Facial">
+
+                    Book Now
+
+                </a>
+
+            </div>
+
+            <div class="service">
+
+                <a href="appointment.html?service=Makeup">
+
+                    <img
+                        src="images/pexels-cottonbro-6648491.jpg"
+                        alt="Makeup">
+
+                    <h3>
+                        Makeup
+                    </h3>
+
+                    <p class="service-price">
+                        Starting from ₹1500
+                    </p>
+
+                    <p class="service-note">
+                        Beauty makeup for special occasions
+                    </p>
+
+                </a>
+
+                <a
+                    class="service-button"
+                    href="appointment.html?service=Makeup">
+
+                    Book Now
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="offers">
+
+        <div class="offer-box">
+
+            <p class="section-subtitle">
+                LIMITED TIME OFFER
+            </p>
+
+            <h2>
+                ✨ Festive Makeup Offer ✨
+            </h2>
+
+            <p>
+                Get beautiful festive makeup
+                starting from
+            </p>
+
+            <p class="offer-price">
+                ₹999
+            </p>
+
+            <a
+                class="button"
+                href="appointment.html?service=Makeup">
+
+                Book Now
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <section id="price-list">
+
+        <p class="section-subtitle">
+            SIMPLE & TRANSPARENT
+        </p>
+
+        <h2>
+            Our Price List
+        </h2>
+
+        <div class="price-list-box">
+
+            <div class="price-row">
+                <span>Haircut</span>
+                <strong>₹300+</strong>
+            </div>
+
+            <div class="price-row">
+                <span>Hair Spa</span>
+                <strong>₹800+</strong>
+            </div>
+
+            <div class="price-row">
+                <span>Facial</span>
+                <strong>₹1,500+</strong>
+            </div>
+
+            <div class="price-row">
+                <span>Makeup</span>
+                <strong>₹1,500+</strong>
+            </div>
+
+        </div>
+
+        <p class="price-note">
+            * Prices may vary depending on service and requirements.
+        </p>
+
+    </section>
+
+    <section id="why-us">
+
+        <h2>
+            Why Choose Glow Beauty Salon?
+        </h2>
+
+        <div class="why-container">
+
+            <div class="why-box">
+
+                <h3>
+                    ✨ Professional Care
+                </h3>
+
+                <p>
+                    Our beauty services are provided with care
+                    and attention to detail.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <h3>
+                    💗 Relaxing Experience
+                </h3>
+
+                <p>
+                    Enjoy a comfortable and peaceful salon experience.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <h3>
+                    🌸 Quality Services
+                </h3>
+
+                <p>
+                    We focus on quality beauty services for every client.
+                </p>
+
+            </div>
+
+
+            <div class="why-box">
+
+                <h3>
+                    🌷 Friendly Service
+                </h3>
+
+                <p>
+                    We create a warm and welcoming environment
+                    for every client.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="testimonials">
+
+        <p class="section-subtitle">
+            CLIENT EXPERIENCE
+        </p>
+
+        <h2>
+            What Our Clients Say
+        </h2>
+
+        <div class="testimonial-container">
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Lovely experience and very friendly service.
+                    I really enjoyed my visit."
+                </p>
+
+                <h3>
+                    — Priya
+                </h3>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "The salon atmosphere was comfortable
+                    and the service was wonderful."
+                </p>
+
+                <h3>
+                    — Ananya
+                </h3>
+
+            </div>
+
+
+            <div class="testimonial">
+
+                <div class="stars">
+                    ★★★★★
+                </div>
+
+                <p>
+                    "Very happy with the service.
+                    I would definitely visit again."
+                </p>
+
+                <h3>
+                    — Neha
+                </h3>
+
+            </div>
+
+        </div>
+
+    </section>
+    <section id="rating">
+    <h2>⭐ Rate Your Experience</h2>
+
+    <p>How was your experience at Glow Beauty Salon?</p>
+
+    <div class="rating-stars">
+        <button type="button" data-rating="1">★</button>
+        <button type="button" data-rating="2">★</button>
+        <button type="button" data-rating="3">★</button>
+        <button type="button" data-rating="4">★</button>
+        <button type="button" data-rating="5">★</button>
+    </div>
+
+    <p id="rating-message"></p>
+    <div id="rating-summary">
+    ⭐ <span id="average-rating">0.0</span> / 5
+    <br>
+    <span id="total-ratings">0 ratings</span>
+</div>
+<div id="average-stars">☆☆☆☆☆</div>
+</section>
+
+    <section id="hours">
+
+        <p class="section-subtitle">
+            VISIT US
+        </p>
+
+        <h2>
+            Opening Hours
+        </h2>
+
+        <div class="hours-box">
+
+            <div class="hours-row">
+                <span>Monday – Friday</span>
+                <strong>10:00 AM – 8:00 PM</strong>
+            </div>
+
+            <div class="hours-row">
+                <span>Saturday</span>
+                <strong>10:00 AM – 8:00 PM</strong>
+            </div>
+
+            <div class="hours-row">
+                <span>Sunday</span>
+                <strong>10:00 AM – 8:00 PM</strong>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="location">
+
+        <p class="section-subtitle">
+            FIND US
+        </p>
+
+        <h2>
+            Our Location
+        </h2>
+
+        <p class="location-text">
+            📍 Mumbai, Maharashtra
+        </p>
+
+        <div class="map-box">
+
+            <iframe
+                src="https://www.google.com/maps?q=Mumbai%2C%20Maharashtra&output=embed"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
+
+        </div>
+
+    </section>
+
+
+    <!-- SALON PROMISE -->
+
+    <section id="promise">
+
+        <h2>
+            Our Salon Promise
+        </h2>
+
+        <p>
+            Quality beauty care, personalized attention, and a
+            relaxing experience — every time you visit us.
+        </p>
+
+    </section>
+
+    <section id="care">
+
+        <h2>
+            Personalized Beauty Care
+        </h2>
+
+        <p>
+            Because every client deserves a little extra care.
+        </p>
+
+    </section>
+
+    <section id="Contact">
+
+        <h2>
+            Contact Us
+        </h2>
+
+        <div class="contact-box">
+
+            <div class="contact-title">
+                Glow Beauty Salon
+            </div>
+
+            <p>
+                📍 Mumbai, Maharashtra
+            </p>
+
+            <p>
+                📞 +91 93354 15198
+            </p>
+
+            <p>
+                🕐 Open: 10:00 AM – 8:00 PM
+            </p>
+
+            <a
+                class="button"
+                href="https://wa.me/919335415198"
+                target="_blank">
+
+                WhatsApp Us
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <a
+        class="top-button"
+        href="#About"
+        title="Back to top">
+
+        ↑
+
+    </a>
+
+<a
+        class="whatsapp-button"
+        href="https://wa.me/919335415198"
+        target="_blank"
+        title="Chat on WhatsApp">
+
+        ☎
+
+    </a>
+
+ <footer>
+
+        <p class="footer-name">
+            Glow Beauty Salon
+        </p>
+
+        <p>
+            Beauty • Care • Confidence
+        </p>
+
+        <p class="footer-small">
+            © 2026 Glow Beauty Salon. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+
+        const themeToggle =
+            document.getElementById("themeToggle");
+
+        themeToggle.addEventListener("click", function () {
+
+            document.body.classList.toggle("dark-mode");
+
+            if (
+                document.body.classList.contains("dark-mode")
+            ) {
+
+                themeToggle.textContent =
+                    "☀️ Light Mode";
+
+            } else {
+
+                themeToggle.textContent =
+                    "🌙 Dark Mode";
+
+            }
+
+        });
+             
+
+    </script>
+                   <script>
+const ratingStars = document.querySelectorAll(".rating-stars button");
+const ratingMessage = document.getElementById("rating-message");
+
+ratingStars.forEach(function (star) {
+    star.addEventListener("click", async function () {
+        const rating = Number(this.dataset.rating);
+
+        ratingStars.forEach(function (item) {
+            item.classList.remove("selected");
+        });
+
+        ratingStars.forEach(function (item) {
+            if (Number(item.dataset.rating) <= rating) {
+                item.classList.add("selected");
+            }
+        });
+
+        try {
+            const response = await fetch("http://localhost:3000/rating", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    rating: rating
+                })
+            });
+
+            const data = await response.json();
+            ratingMessage.textContent = data.message;
+        } catch (error) {
+            ratingMessage.textContent = "Unable to submit rating.";
+        }
+    });
+});
+
+     async function loadRatingSummary() {
+    try {
+        const response = await fetch("/ratings");
+        const data = await response.json();
+
+        document.getElementById("average-rating").textContent = data.average;
+        document.getElementById("total-ratings").textContent =
+            data.total + (data.total === 1 ? " rating" : " ratings");
+            const fullStars = Math.round(data.average);
+document.getElementById("average-stars").textContent =
+    "★".repeat(fullStars) + "☆".repeat(5 - fullStars);
+    } catch (error) {
+        console.log("Could not load ratings.");
+    }
+}
+
+loadRatingSummary();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Book Appointment - Glow Beauty Salon</title>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff5f8;
+            color: #333;
+        }
+
+        /* TOP HEADER */
+
+        header {
+            background-color: #d96b8a;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 15px;
+        }
+
+        /* HOME BUTTON */
+
+        .home-button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 9px 18px;
+            border-radius: 20px;
+            background-color: white;
+            color: #d96b8a;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .home-button:hover {
+            background-color: #fff0f4;
+            transform: scale(1.05);
+        }
+
+        /* APPOINTMENT BOX */
+
+        .appointment-box {
+            width: 400px;
+            max-width: calc(100% - 30px);
+            box-sizing: border-box;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px #ddd;
+        }
+
+        .appointment-box h2 {
+            text-align: center;
+            color: #d96b8a;
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin: 0 0 8px;
+        }
+
+        .appointment-subtitle {
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        /* FORM */
+
+        label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 6px;
+            font-weight: bold;
+            color: #555;
+            font-size: 14px;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e4cfd6;
+            border-radius: 9px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            background-color: #fffafa;
+            outline: none;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #d96b8a;
+            box-shadow: 0 0 0 3px #f9dce5;
+        }
+
+        textarea {
+            height: 80px;
+            resize: none;
+        }
+
+        /* BOOK BUTTON */
+
+        .book-btn {
+            width: 100%;
+            margin-top: 22px;
+            padding: 13px;
+            border: none;
+            border-radius: 25px;
+            background-color: #d96b8a;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 12px #e5b8c5;
+        }
+
+        .book-btn:hover {
+            background-color: #b84f70;
+            transform: translateY(-2px);
+        }
+
+        /* BOTTOM NOTE */
+
+        .booking-note {
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            margin-top: 18px;
+            line-height: 1.5;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background-color: #d96b8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 5px;
+        }
+
+        .footer-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 19px;
+        }
+
+        .footer-small {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 28px;
+            }
+
+            .appointment-box {
+                margin: 25px auto;
+                padding: 22px;
+            }
+
+            .appointment-box h2 {
+                font-size: 25px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <h1>Glow Beauty Salon</h1>
+
+        <p>Beauty • Care • Confidence</p>
+
+        <a class="home-button" href="index.html">
+            ← Back to Home
+        </a>
+
+    </header>
+
+
+    <!-- APPOINTMENT FORM -->
+
+    <div class="appointment-box">
+
+        <h2>Book Your Appointment</h2>
+
+        <p class="appointment-subtitle">
+            Fill in your details below
+        </p>
+
+
+        <form>
+
+            <label>Full Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+                required>
+
+
+            <label>Mobile Number</label>
+
+            <input
+                type="tel"
+                id="mobile"
+                placeholder="Enter mobile number"
+                required>
+
+
+            <label>Select Service</label>
+
+            <select id="service" required>
+
+                <option value="">
+                    Choose a service
+                </option>
+
+                <option>Haircut</option>
+
+                <option>Hair Spa</option>
+
+                <option>Facial</option>
+
+                <option>Makeup</option>
+
+            </select>
+
+
+            <label>Preferred Date</label>
+
+            <input
+                type="date"
+                id="date"
+                required>
+
+
+            <label>Preferred Time</label>
+
+            <input
+                type="time"
+                id="time"
+                required>
+
+
+            <label>Message</label>
+
+            <textarea
+                id="message"
+                placeholder="Any special request?"></textarea>
+
+
+            <button
+                class="book-btn"
+                type="button">
+
+                Confirm Appointment
+
+            </button>
+
+        </form>
+
+
+        <p class="booking-note">
+            Your appointment request will be sent to us on WhatsApp.
+        </p>
+
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p class="footer-name">
+            Glow Beauty Salon
+        </p>
+
+        <p>
+            Beauty • Care • Confidence
+        </p>
+
+        <p class="footer-small">
+            © 2026 Glow Beauty Salon. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+<script>
+
+document.querySelector(".book-btn").addEventListener("click", function() {
+
+    let name = document.getElementById("name").value;
+
+    let mobile = document.getElementById("mobile").value;
+
+    let service = document.getElementById("service").value;
+
+    let date = document.getElementById("date").value;
+
+    let time = document.getElementById("time").value;
+
+    let message = document.getElementById("message").value;
+
+
+    let whatsappMessage =
+        "Hello Glow Beauty Salon!%0A%0A" +
+        "I would like to book an appointment.%0A%0A" +
+        "Name: " + name + "%0A" +
+        "Mobile: " + mobile + "%0A" +
+        "Service: " + service + "%0A" +
+        "Date: " + date + "%0A" +
+        "Time: " + time + "%0A" +
+        "Message: " + message;
+
+
+    window.open(
+        "https://wa.me/919335415198?text=" + whatsappMessage,
+        "_blank"
+    );
+
+});
+
+</script>
+
+
+</body>
+</html>
